@@ -13,7 +13,7 @@ def test_improper_payments_dgp():
     
     mean_X = pop_data.X.mean()
     total_X = pop_data.X.sum()
-    cv_X = pop_data.X.var()**0.5/pop_data.X.mean()
+    cv_X = pop_data.X.std()/pop_data.X.mean()
     min_B = pop_data.B.min()
     max_B = pop_data.B.max()
     mean_Z = pop_data.Z.mean()

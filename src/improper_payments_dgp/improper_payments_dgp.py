@@ -2,7 +2,7 @@ from truncated_gamma_rvs import truncgamma_rvs
 from scipy.stats import uniform, binom
 import pandas as pd
 
-def improper_payments_dgp(mean_target, cv_target, A, B, b, p_improper, size, random_state = None):
+def improper_payments_dgp(mean_target, cv_target, A, B, b, p_improper, size=1, random_state = None):
     """This function generates simulated data for improper payments.
     
     Args:
@@ -24,7 +24,7 @@ def improper_payments_dgp(mean_target, cv_target, A, B, b, p_improper, size, ran
         
     Example:
         >>> pop_data = improper_payment_rvs(mean_target = 100, cv_target = 1/2, A = 0, B = 1000, b = (0.4, 0.6), p_improper = 0.1, size = 100000, random_state = 123)
-        >>> print(f"The mean payment amount is ${pop_data.X.mean():.2f} with a total payment amount of ${pop_data.X.sum():,.2f}.\nThe coefficient of variation for payment amounts is {pop_data.X.var()**0.5/pop_data.X.mean():.2%}.\nThe minimum and maximum percentages of improper payments are {pop_data.B.min():.2%} and {pop_data.B.max():.2%}, respectively.\nThe probability of an improper payment is {pop_data.Z.mean():.2%}.\nThe mean improper payment amount (conditional on being improper) is ${pop_data.Y[pop_data.Y > 0].mean():.2f} with a total improper payment amount of ${pop_data.Y.sum():,.2f}.")
+        >>> print(f"The mean payment amount is ${pop_data.X.mean():.2f} with a total payment amount of ${pop_data.X.sum():,.2f}.\nThe coefficient of variation for payment amount is {pop_data.X.var()**0.5/pop_data.X.mean():.2%}.\nThe minimum and maximum percentages of improper payments are {pop_data.B.min():.2%} and {pop_data.B.max():.2%}, respectively.\nThe probability of an improper payment is {pop_data.Z.mean():.2%}.\nThe mean improper payment amount (conditional on being improper) is ${pop_data.Y[pop_data.Y > 0].mean():.2f} with a total improper payment amount of ${pop_data.Y.sum():,.2f}.")
     """
     b = b if type(b) is tuple else (b, b)
     
