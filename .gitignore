@@ -1,0 +1,14 @@
+setup.sh
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.env
+.DS_Store
+.vscode/
+.idea/
+logs/
+tmp/
+.pytest_cache/

@@ -1,1 +1,1 @@
-# improper-payments-dgp-py-package
+# improper-payments-dgp
