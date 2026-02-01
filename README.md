@@ -112,7 +112,7 @@ If you use this package in your research, please consider citing it:
     author = {Wade K. Copeland},
     title = {{improper-payments-dgp: A Python package to simulate data for improper payments}},
     url = {https://pypi.org/project/improper-payments-dgp/},
-    version = {0.1.6},
+    version = {0.1.7},
     year = {2026}
 }
 ```
