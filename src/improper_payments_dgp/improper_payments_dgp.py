@@ -7,7 +7,7 @@ def improper_payments_dgp(mean_target, cv_target, A, B, b, p_improper, size=1, r
     
     Args:
         mean_target (int or float): The target mean payment amount.
-        cv_target (float): The target coefficient of variation (e.g., CV[X] = SD[X]/mean[X]) for the payment amount.
+        cv_target (float): The target coefficient of variation (e.g., CV[X] = SD[X]/E[X]) for the payment amount.
         A (int or float): The minimum payment amount.
         B (int or float): The maximum payment amount.
         b (int, float, or tuple): Bounds of the uniform distribution (0 <= b <= 1) for the percentage of each payment that is improper.
